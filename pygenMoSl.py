@@ -4,7 +4,6 @@ from ase.db import connect
 from ase.visualize import view
 from pymatgen.io.ase import AseAtomsAdaptor
 from pymatgen.analysis.local_env import VoronoiNN
-from random import sample
 
 class Gen_MoSl_descritptor(object):
     def sort_descriptor(func):
@@ -226,8 +225,6 @@ class Gen_MoSl_descritptor(object):
         return descriptor
     
 if __name__ == '__main__':
-    from multiprocessing import Pool
-    import tqdm
     import ase
     atoms = ase.io.read(_user-defined_)
     dcpt = Gen_MoSl_descritptor(atoms)
